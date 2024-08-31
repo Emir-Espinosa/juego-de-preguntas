@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciencias Sociales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ciencias Sociales 5° Grado</h1>
+        <div id="setup">
+            <h2>Escribe tu nombre</h2>
+            <div id="player1-setup">
+                <h3>Estudiante 1</h3>
+                <label for="name1">Nombre:</label>
+                <input type="text" id="name1" placeholder="Nombre del Jugador 1">
+                <label for="avatar1">Selecciona un avatar:</label>
+                <select id="avatar1">
+                    <option value="avatar1.jpg">Avatar 1</option>
+                    <option value="avatar2.jpg">Avatar 2</option>
+                    <option value="avatar3.jpg">Avatar 3</option>
+                </select>
+            </div>
+            <div id="player2-setup">
+                <h3>Estudiante 2</h3>
+                <label for="name2">Nombre:</label>
+                <input type="text" id="name2" placeholder="Nombre del Jugador 2">
+                <label for="avatar2">Selecciona un avatar:</label>
+                <select id="avatar2">
+                    <option value="avatar1.jpg">Avatar 1</option>
+                    <option value="avatar2.jpg">Avatar 2</option>
+                    <option value="avatar3.jpg">Avatar 3</option>
+                </select>
+            </div>
+            <button id="start-game-btn">Comenzar Juego</button>
+        </div>
+        <div id="game" style="display: none;">
+            <div id="question-container">
+                <p id="question">¿Cuál es la capital de Francia?</p>
+            </div>
+            <div id="answer-container">
+                <!-- Respuestas se llenarán dinámicamente -->
+            </div>
+            <div id="scoreboard">
+                <div class="player" id="player1-board">
+                    <h2>Jugador 1</h2>
+                    <img id="avatar1-img" src="images/avatar1.jpg" alt="Avatar Jugador 1">
+                    <p>Nombre: <span id="player1-name"></span></p>
+                    <p>Puntos: <span id="score1">0</span></p>
+                </div>
+                <div class="player" id="player2-board">
+                    <h2>Jugador 2</h2>
+                    <img id="avatar2-img" src="images/avatar2.jpg" alt="Avatar Jugador 2">
+                    <p>Nombre: <span id="player2-name"></span></p>
+                    <p>Puntos: <span id="score2">0</span></p>
+                </div>
+            </div>
+            <button id="next-btn">Siguiente Pregunta</button>
+            <div id="timer">Tiempo restante: <span id="time">30</span> segundos</div>
+            <div id="end-game" style="display: none;">
+                <h2>¡Juego terminado!</h2>
+                <p id="winner"></p>
+                <p>Puntaje final:</p>
+                <div id="scoreboard">
+                    <div class="player">
+                        <h2>Jugador 1</h2>
+                        <p id="final-score1">0</p>
+                    </div>
+                    <div class="player">
+                        <h2>Jugador 2</h2>
+                        <p id="final-score2">0</p>
+                    </div>
+                </div>
+                <button id="restart-game-btn">Reiniciar Juego</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
